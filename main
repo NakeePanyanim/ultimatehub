@@ -124,6 +124,35 @@ Main2:AddButton({
 })
 end
 })
+local Main3 = Window:MakeTab({
+	     Name = "Money/Energon",
+	     Icon = "rbxassetid://4483345998",
+	     PremiumOnly = false
+})
+Main3:AddButton({
+	Name = "INF Money/Energon (More chance get banned)",
+	Callback = function()
+      	game.Players.LocalPlayer.leaderstats.Energon.Value = 999999999
+        OrionLib:MakeNotification({
+	            Name = "BCNZXT - Notify",
+	            Content = "Succes",
+	            Image = "rbxassetid://4483345998",
+	            Time = 2
+})
+end
+})
+Main3:AddButton({
+	Name = "Give 10000 Money/Energon (Not Banned)",
+	Callback = function()
+      	game.Players.LocalPlayer.leaderstats.Energon.Value = 10000
+        OrionLib:MakeNotification({
+	            Name = "BCNZXT - Notify",
+	            Content = "Succes",
+	            Image = "rbxassetid://4483345998",
+	            Time = 2
+})
+end
+})
 local Misc = Window:MakeTab({
 	     Name = "Misc",
 	     Icon = "rbxassetid://4483345998",
