@@ -1,0 +1,182 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/NakeePanyanim/script/refs/heads/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Enter Key", HidePremium = false, SaveConfig = true, ConfigFolder = "BCNZXT Fodler"})
+
+OrionLib:MakeNotification({
+	Name = "BCNZXT Hub",
+	Content = "Enter your Key",
+	Image = "",
+	Time = 3
+})
+
+_G.Key = "bcnzxt"
+_G.KeyInput = "string"
+
+function Destroy()
+    game:GetService("CoreGui").Orion:Destroy()
+end
+function MakeScriptHub()
+    
+end
+
+function CorrectKeyNotification()
+    Destroy()
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/NakeePanyanim/script/refs/heads/main/source')))()
+    local Window = OrionLib:MakeWindow({Name = "BCNZXT - Transformers Crossfire", HidePremium = false, SaveConfig = true, ConfigFolder = "BCNZXT Fodler"})
+    OrionLib:MakeNotification({
+	Name = "BCNZXT Hub",
+	Content = "Welcome to BCNZXT Hub",
+	Image = "",
+	Time = 3
+})
+
+
+local Main = Window:MakeTab({
+	     Name = "AUTOBOT",
+	     Icon = "rbxassetid://4483345998",
+	     PremiumOnly = false
+})
+Main:AddButton({
+	Name = "JAZZ",
+	Callback = function()
+      	game.Players.LocalPlayer.leaderstats.JAZZ.Value = true
+        OrionLib:MakeNotification({
+	            Name = "BCNZXT - Notify",
+	            Content = "Succes",
+	            Image = "rbxassetid://4483345998",
+	            Time = 2
+})
+end
+})
+Main:AddButton({
+	Name = "IRONHIDE",
+	Callback = function()
+      	game.Players.LocalPlayer.leaderstats.IRONHIDE.Value = true
+        OrionLib:MakeNotification({
+	            Name = "BCNZXT - Notify",
+	            Content = "Succes",
+	            Image = "rbxassetid://4483345998",
+	            Time = 2
+})
+end
+})
+Main:AddButton({
+	Name = "RATCHET",
+	Callback = function()
+      	game.Players.LocalPlayer.leaderstats.RATCHET.Value = true
+        OrionLib:MakeNotification({
+	            Name = "BCNZXT - Notify",
+	            Content = "Succes",
+	            Image = "rbxassetid://4483345998",
+	            Time = 2
+})
+end
+})
+local Main2 = Window:MakeTab({
+	     Name = "DECEPTICONS",
+	     Icon = "rbxassetid://4483345998",
+	     PremiumOnly = false
+})
+Main2:AddButton({
+	Name = "BONECRUSHER",
+	Callback = function()
+      	game.Players.LocalPlayer.leaderstats.BONECRUSHER.Value = true
+        OrionLib:MakeNotification({
+	            Name = "BCNZXT - Notify",
+	            Content = "Succes",
+	            Image = "rbxassetid://4483345998",
+	            Time = 2
+})
+end
+})
+Main2:AddButton({
+	Name = "BRAWL",
+	Callback = function()
+      	game.Players.LocalPlayer.leaderstats.BRAWL.Value = true
+        OrionLib:MakeNotification({
+	            Name = "BCNZXT - Notify",
+	            Content = "Succes",
+	            Image = "rbxassetid://4483345998",
+	            Time = 2
+})
+end
+})
+Main2:AddButton({
+	Name = "STARSCREAM",
+	Callback = function()
+      	game.Players.LocalPlayer.leaderstats.STARSCREAM.Value = true
+        OrionLib:MakeNotification({
+	            Name = "BCNZXT - Notify",
+	            Content = "Succes",
+	            Image = "rbxassetid://4483345998",
+	            Time = 2
+})
+end
+})
+Main2:AddButton({
+	Name = "MEGATRON",
+	Callback = function()
+      	game.Players.LocalPlayer.leaderstats.MEGATRON.Value = true
+        OrionLib:MakeNotification({
+	            Name = "BCNZXT - Notify",
+	            Content = "Succes",
+	            Image = "rbxassetid://4483345998",
+	            Time = 2
+})
+end
+})
+local Misc = Window:MakeTab({
+	     Name = "Misc",
+	     Icon = "rbxassetid://4483345998",
+	     PremiumOnly = false
+})
+Misc:AddButton({
+	Name = "Kill your self faster",
+	Callback = function()
+      	game.Players.LocalPlayer.Character.Humanoid.Health = 0
+        OrionLib:MakeNotification({
+	            Name = "BCNZXT - Notify",
+	            Content = "Succes",
+	            Image = "rbxassetid://4483345998",
+	            Time = 2
+})
+    end
+})
+Misc:AddParagraph("Version of BCNZXT","0.0.1 Hub")
+end
+
+function InCorrectKeyNotification()
+    OrionLib:MakeNotification({
+	    Name = "BCNZXT Hub",
+	    Content = "Incorrect Key! Check on YT : BCNZXT Hub",
+	    Image = "",
+	    Time = 3
+    })
+end
+
+local Tab = Window:MakeTab({
+	Name = "Key",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+Tab:AddTextbox({
+	Name = "Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.KeyInput = Value
+	end	  
+})
+
+Tab:AddButton({
+	Name = "Enter",
+	Callback = function()
+      	if _G.KeyInput == _G.Key then
+        MakeScriptHub()
+        CorrectKeyNotification()
+        else
+             InCorrectKeyNotification()
+        end 
+  	end    
+})
